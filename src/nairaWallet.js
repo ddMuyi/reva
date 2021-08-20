@@ -1,5 +1,4 @@
 import React from 'react'
-import './nairawallet.css'
 import {
   BrowserRouter as Router,
   Route,
@@ -14,22 +13,22 @@ const TradeButtons = () =>{
   return (
     <div className="buttons">
       <NavLink to="/nairawallet/transfernaira">
-        <div className="trade-icon">
+        <div className="">
           <span><i class="fas fa-long-arrow-alt-up"></i></span>
         </div>
-        <div className="trade-text">Withdraw</div>
+        <div className="">Withdraw</div>
       </NavLink>
       <NavLink to="/nairawallet/sendnaira">
-        <div className="trade-icon">
+        <div className="">
           <span><i class="fas fa-long-arrow-alt-right"></i></span>
         </div>
-        <div className="trade-text">Send</div>
+        <div className="">Send</div>
       </NavLink>
       <NavLink to="/nairawallet/depositnaira">
-        <div className="trade-icon">
+        <div className="">
           <span><i class="fas fa-long-arrow-alt-down"></i></span>
         </div>
-        <div className="trade-text">Deposit</div>
+        <div className="">Deposit</div>
       </NavLink>
     </div>
   )
@@ -37,9 +36,9 @@ const TradeButtons = () =>{
 
 const nairaWallet = (props) =>{
   return (
-    <div className = "naira-wallet">
-      <h1 className="naira-wallet-header">NairaWallet</h1>
-      <h3 className="naira-balance">NGN {props.naira}</h3>
+    <div className = "">
+      <h1 className="">NairaWallet</h1>
+      <h3 className="">NGN {props.naira}</h3>
 
       <Router>
         <TradeButtons/>

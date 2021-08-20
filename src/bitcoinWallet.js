@@ -8,28 +8,27 @@ import {
 import Transfer from './Transfer'
 import Sell from './Sell'
 import Buy from './Buy'
-import './bitcoinwallet.css'
 
 const TradeButtons = () =>{
   return (
     <div className="buttons">
           <NavLink to="/bitcoinWallet/transfer">
-            <div className="trade-icon">
+            <div className="">
               <span><i class="fas fa-long-arrow-alt-up"></i></span>
             </div>
-            <div className="trade-text">Transfer</div>
+            <div className="">Transfer</div>
           </NavLink>
           <NavLink to="/bitcoinWallet/sell">
-           <div className="trade-icon">
+           <div className="">
               <span><i class="fas fa-long-arrow-alt-up"></i></span>
             </div>
-            <div className="trade-text">Sell</div>
+            <div className="">Sell</div>
           </NavLink>
           <NavLink to="/bitcoinWallet/buy">
-            <div className="trade-icon">
+            <div className="">
               <span><i class="fas fa-long-arrow-alt-up"></i></span>
             </div>
-            <div className="trade-text">Buy</div>
+            <div className="">Buy</div>
           </NavLink>
         </div>
   )
@@ -37,8 +36,8 @@ const TradeButtons = () =>{
 
 const BitcoinWallet = (props) =>{
   return (
-    <div className="btc-wallet">
-      <div className="btc-header">
+    <div className="">
+      <div className="">
         <h1>BitCoin Wallet</h1>
         <h3>{props.wallet}</h3>
       </div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import './wallet.css'
 
 const Home = (props) =>{
   const nairaEquiv = (props.bitcoin * 14000000).toFixed(2)
@@ -13,16 +12,16 @@ const Home = (props) =>{
         </div>
 
         <section className="wallets">
-          <NavLink  to="/bitcoinWallet" className="btc">
-            <div className="wallet">
+          <NavLink  to="/bitcoinWallet" className="">
+            <div className="">
               <span className="span"><i className="fa fa-btc"></i></span>
               <h5>B {props.bitcoin} sat</h5>
               <h5>NGN {nairaEquiv}</h5>
             </div>
           </NavLink>
-          <NavLink  to="/nairaWallet" className="naira">
-            <div className="wallet naira-text">
-              <span className="span">#</span>
+          <NavLink  to="/nairaWallet" className="">
+            <div className="">
+              <span className="">#</span>
               <h5>NGN {props.naira}</h5>
               <h5>$ {dollarEquiv}</h5>
             </div>
@@ -30,26 +29,26 @@ const Home = (props) =>{
         </section>
       </section>
 
-      <section className="lead-balance">
-        <div className="lead-title">
+      <section className="">
+        <div className="">
           <h5>Lead Balance</h5>
           <p>(This is the total balance in differenct denominations)</p>
         </div>
-        <div className="lead-account">
-          <div className="lead-btc bal">
+        <div className="">
+          <div className="">
             <h6>{props.bitcoin}</h6>
           </div>
-          <div className="lead-naira bal">
+          <div className="">
             <h6>{props.naira}</h6>
           </div>
-          <div className="lead-dollar bal">
+          <div className="">
             <h6>{props.bitcoin}</h6>
           </div>
         </div>
       </section>
 
-      <section className="warning">
-        <div className="warning-content">
+      <section className="">
+        <div className="">
           <span><i className="fas fa-exclamation-circle"></i></span>
           <h6>Navigate to settings to setup your default Naira withdrawals bank account </h6>
         </div>

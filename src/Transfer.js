@@ -1,5 +1,4 @@
 import React from 'react'
-import './btc-transfer.css'
 
 const Transfer = (props)=>{
   const [amountBTCTransfer, setAmountBTCTransfer] = React.useState('')
@@ -15,27 +14,27 @@ const Transfer = (props)=>{
   },[amountBTCTransfer])
 
   return (
-    <section className="btc-transfer-cont">
+    <section className="">
       <h2>Transfer</h2>
-      <div className="form-cont">
-        <form  className="form" action="#">
-          <div className="btc-amount">
+      <div className="">
+        <form  className="" action="#">
+          <div className="">
             <label htmlFor="amount">Amount in BTC</label>
             <input type="text" id="amount" name="amount" onChange={changeHandler} value={amountBTCTransfer}/> <br/>
             <small>BTC Balance: {props.balance}</small>
           </div>
 
-          <div className="equivNairaAmount">
+          <div className="">
             <label htmlFor="nairaAmount">Amount in Naira</label>
             <input type="text" id="nairaAmount" name="nairaAmount" onChange={()=>{}} value={convertedNaira}/>
           </div>
 
-          <div className="reciep-wallet">
+          <div className="">
             <label htmlFor="address">Reciepient wallet ID</label>
             <input type="text" id="address" name="address"/>
           </div>
 
-          <button className="transferBTC-btn" onClick={props.transferHandler}>Transfer</button>
+          <button className="" onClick={props.transferHandler}>Transfer</button>
 
 
         </form>

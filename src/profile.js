@@ -1,15 +1,14 @@
 import react from 'react'
-import './profile.css'
 
 const Profile = ({name, email, phoneNumber, address}) =>{
   return (
-    <section className="profile">
-      <section className = "details-cont">
-        <div className="details-title">
+    <section className="">
+      <section className = "">
+        <div className="">
           <h6>Account-details</h6>
           <button>Edit</button>
         </div>
-        <section className="details">
+        <section className="">
           <h5>Account Name : {name}</h5>
           <h5>Emial: {email}</h5>
           <h5>Phone Number: {phoneNumber}</h5>
@@ -17,32 +16,32 @@ const Profile = ({name, email, phoneNumber, address}) =>{
         </section>
       </section>
 
-      <section className="security">
-        <div className="security-card">
-          <div className="security-icon">
+      <section className="">
+        <div className="">
+          <div className="">
             <span><i className="fas fa-lock"></i></span>
           </div>
-          <div className="security-text">
+          <div className="">
             Change Password
           </div>
         </div>
 
 
-        <div className="security-card">
-          <div className="security-icon">
+        <div className="">
+          <div className="">
             <span><i className="fas fa-piggy-bank"></i></span>
           </div>
-          <div className="security-text">
+          <div className="">
             Edit Bank details
           </div>
         </div>
 
 
-        <div className="security-card">
-          <div className="security-icon">
+        <div className="">
+          <div className="">
             <span><i className="fas fa-key"></i></span>
           </div>
-          <div className="security-text">
+          <div className="">
             Change Pin
           </div>
         </div>

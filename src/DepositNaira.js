@@ -1,5 +1,4 @@
 import React from 'react'
-import './deposit.css'
 
 const DepositNaira = ({depositor}) =>{
   const [deposit, setDeposit] = React.useState(0)
@@ -12,18 +11,18 @@ const DepositNaira = ({depositor}) =>{
     localStorage.setItem('deposit', deposit)
   })
   return (
-    <section className="deposit-cont">
+    <section className="">
       <h2>Deposit BTC</h2>
-      <div className="form-container">
+      <div className="">
         <div>
           <label htmlFor="amount">Please Enter the amount you intend to deposit:</label>
           <input type="text" id="amount" name="amount" value={deposit} onChange={depositHandler}/>
         </div>
-        <div className="naira-account">
+        <div className="">
           <h6>Here is your reva wallet address</h6>
           <h5>235689784512</h5>
         </div>
-        <button className="deposit-naira" onClick={depositor}>Deposit</button>
+        <button className="" onClick={depositor}>Deposit</button>
       </div>
     </section>
   )

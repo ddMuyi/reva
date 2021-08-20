@@ -1,20 +1,19 @@
 import React from 'react'
-import './sendNaira.css'
 
 const SendNaira = () =>{
   return (
-    <section className="send-naira">
+    <section className="">
       <h2>Send Naira</h2>
-      <div className="form-container">
-        <div className="cont">
+      <div className="">
+        <div className="">
           <label htmlFor="amount">Amount in Naira</label>
           <input type="text" id="amount" name="amount"/>
         </div>
-        <div className="cont">
+        <div className="">
           <label htmlFor="amountBTC">Amount in BTC</label>
           <input type="text" id="amountBTC" name="amountBTC"/>
         </div>
-        <button className="send">Send</button>
+        <button className="">Send</button>
       </div>
     </section>
   )

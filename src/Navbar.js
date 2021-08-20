@@ -1,26 +1,26 @@
 import React from 'react'
 import CompanyLogo from './logo.jpg'
-import './navbar.css'
+
 
 const Navbar = (props) =>{
   return (
-    <header className="header">
-      <section className="left-nav">
-        <div className="logo-cont">
+    <header className="">
+      <section className="">
+        <div className="">
           <img src={CompanyLogo} alt=""/>
         </div>
-        <div className="user-cont">
-          <div className="user-logoCont">
-            <span><i className="fa fa-user"></i></span>
+        <div className="">
+          <div className="">
+            <span><i className=""></i></span>
           </div>
-          <h4 className="username">{props.username}</h4>
+          <h4 className="">{props.username}</h4>
         </div>
       </section>
 
 
-      <section className="right-nav">
-        <div className="notification-cont">
-          <span><i className = "fa fa-bell"></i></span>
+      <section className="">
+        <div className="">
+          <span><i className = ""></i></span>
         </div>
       </section>
     </header>

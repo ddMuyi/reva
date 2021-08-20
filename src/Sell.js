@@ -1,5 +1,4 @@
 import React from 'react'
-import './sell.css'
 
 const Sell = (props) =>{
   const [sellAmount, setSellAmount] = React.useState('')
@@ -20,18 +19,18 @@ const Sell = (props) =>{
 
 
   return (
-    <section className="sell">
+    <section className="">
       <h2>Sell BTC</h2>
-      <div className="form-container">
-        <div className="naira-input">
+      <div className="">
+        <div className="">
           <label htmlFor="amount">Amount in Naira</label>
           <input type="text" id="amount" name="amount" onChange={sellHandler} value={sellAmount}/>
         </div>
-        <div className="btc-input">
+        <div className="">
           <label htmlFor="amountBTC">Amount in BTC</label>
           <input type="text" id="amountBTC" name="amountBTC" onChange={returnToNaira} value={equivBTC}/>
         </div>
-        <button className="sell-btn"onClick = {props.sellHandler}>sell</button>
+        <button className=""onClick = {props.sellHandler}>sell</button>
       </div>
     </section>
   )

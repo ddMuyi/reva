@@ -1,5 +1,4 @@
 import React from 'react'
-import './transfernaira.css'
 
 const TransferNaira = ()=>{
   const [transferAmount, setTransferAmount] = React.useState(0)
@@ -13,18 +12,18 @@ const TransferNaira = ()=>{
     setDisplay(!display)
   }
   return (
-    <section className="transfer-naira">
-      <h2 className="transfer-naira-title">Transfer naira</h2>
-      <div className="form-cont">
+    <section className="">
+      <h2 className="">Transfer naira</h2>
+      <div className="">
         <form action="#">
-          <div className="naira-withdrawal">
+          <div className="">
             <label htmlFor="amount">Amount you intend to withdraw</label>
             <input type="text" id="amount" name="amount" onChange={transferHandler} value={transferAmount}/>
           </div>
 
-          {display === false ? <div className="naira-wallet-address">
-            <button onClick={displayDefault} className="another">Send to another account</button>
-            <button className="default-address">Send to default</button>
+          {display === false ? <div className="">
+            <button onClick={displayDefault} className="">Send to another account</button>
+            <button className="">Send to default</button>
           </div> : ''}
 
 
@@ -38,24 +37,24 @@ const TransferNaira = ()=>{
 
 const Default = ({setDisplay}) =>{
   return (
-    <div className="default">
-      <div className="cont">
+    <div className="">
+      <div className="">
         <label htmlFor="#">Bank Name</label>
         <input type="text"/>
       </div>
 
-      <div className="cont">
+      <div className="">
         <label htmlFor="#">Account Number</label>
         <input type="text"/>
       </div>
 
-      <div className="cont">
+      <div className="">
         <label htmlFor="#">Name</label>
         <input type="text"/>
       </div>
-      <div className="default-buttons">
-        <button className="default-secondary">Default</button>
-        <button onClick={setDisplay} className="withdraw">Withdraw</button>
+      <div className="">
+        <button className="">Default</button>
+        <button onClick={setDisplay} className="">Withdraw</button>
       </div>
     </div>
   )

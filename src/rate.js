@@ -2,7 +2,7 @@ import React from 'react'
 
 const Rate = () =>{
   return (
-    <h1>Rate</h1>
+    <h1 className="">Rate</h1>
   )
 }
 
