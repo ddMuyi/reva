@@ -1,0 +1,14 @@
+*{
+  font-family:Campton;
+}
+
+.main {
+  display:flex;
+  position:relative;
+  background-color:#A5D6A7;
+}
+
+.switch {
+  width:70%;
+}
+
