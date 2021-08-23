@@ -14,13 +14,10 @@ const Navbar = (props) =>{
           <h4 className="ml-4">{props.username}</h4>
         </div>
       </section>
-
-
-      <section className="">
-        <div className="">
-          <span><i className = "fa fa-sign-out-alt text-red-600"></i></span>
-        </div>
-      </section>
+      <div className="flex justify-center items-center text-red-600">
+        <span><i className = "fa fa-sign-out-alt text-2xl mr-4"></i></span>
+        <p>Logout</p>
+      </div>      
     </header>
   )
 }

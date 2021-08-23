@@ -11,6 +11,7 @@ module.exports = {
       green:colors.emerald,
       red:colors.red,
       gray:colors.coolGray,
+      white:colors.white,
       orange:{
         50:'#fff3e0',
         100:'#ffe0b2',

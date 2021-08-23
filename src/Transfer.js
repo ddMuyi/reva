@@ -13,28 +13,30 @@ const Transfer = (props)=>{
     localStorage.setItem("amountBTCTransfer", amountBTCTransfer)
   },[amountBTCTransfer])
 
+  const inputClasses = 'w-full h-8 pl-4 border-gray-500 border'
+
   return (
-    <section className="">
-      <h2>Transfer</h2>
-      <div className="">
-        <form  className="" action="#">
-          <div className="">
+    <section className="filter shadow-md mx-auto h-auto w-4/5 sm:w-96 bg-white mt-4 py-6 rounded-lg">
+      <h2 className="text-center text-orange-800 semibold text-xl">Transfer</h2>
+      <div className="w-5/6 mx-auto">
+        <form  className="w-full h-full" action="#">
+          <div className="w-full">
             <label htmlFor="amount">Amount in BTC</label>
-            <input type="text" id="amount" name="amount" onChange={changeHandler} value={amountBTCTransfer}/> <br/>
-            <small>BTC Balance: {props.balance}</small>
+            <input type="text" id="amount" name="amount" onChange={changeHandler} value={amountBTCTransfer} className={`${inputClasses}`}/> <br/>
+            <small className="ml">BTC Balance: {props.balance}</small>
           </div>
 
-          <div className="">
+          <div className="mt-4">
             <label htmlFor="nairaAmount">Amount in Naira</label>
-            <input type="text" id="nairaAmount" name="nairaAmount" onChange={()=>{}} value={convertedNaira}/>
+            <input type="text" id="nairaAmount" name="nairaAmount" onChange={()=>{}} value={convertedNaira} className={`${inputClasses}`}/>
           </div>
 
-          <div className="">
+          <div className="mt-4">
             <label htmlFor="address">Reciepient wallet ID</label>
-            <input type="text" id="address" name="address"/>
+            <input type="text" id="address" name="address" className={`${inputClasses}`}/>
           </div>
 
-          <button className="" onClick={props.transferHandler}>Transfer</button>
+          <button className="mt-4 w-full bg-green-800 text-gray-50 h-8 uppercase text-sm" onClick={props.transferHandler}>Transfer</button>
 
 
         </form>

@@ -10,35 +10,33 @@ import SendNaira from './SendNaira'
 import DepositNaira from './DepositNaira'
 
 const TradeButtons = () =>{
+  const linkClasses = 'flex h-full w-full items-center justify-center'
   return (
-    <div className="buttons">
-      <NavLink to="/nairawallet/transfernaira">
-        <div className="">
-          <span><i class="fas fa-long-arrow-alt-up"></i></span>
-        </div>
+    <div className="filter shadow-lg w-4/5 sm:w-96 h-12 mx-auto bg-white flex items-center justify-between">
+      <NavLink to="/nairawallet/transfernaira" className={`${linkClasses}`}>
+        <span><i class="fas fa-long-arrow-alt-up"></i></span>
         <div className="">Withdraw</div>
       </NavLink>
-      <NavLink to="/nairawallet/sendnaira">
-        <div className="">
-          <span><i class="fas fa-long-arrow-alt-right"></i></span>
-        </div>
+      <NavLink to="/nairawallet/sendnaira" className={`${linkClasses}`}>
+        <span><i class="fas fa-long-arrow-alt-right"></i></span>
         <div className="">Send</div>
       </NavLink>
-      <NavLink to="/nairawallet/depositnaira">
-        <div className="">
-          <span><i class="fas fa-long-arrow-alt-down"></i></span>
-        </div>
+      <NavLink to="/nairawallet/depositnaira" className={`${linkClasses}`}>
+        <span><i class="fas fa-long-arrow-alt-down"></i></span>
         <div className="">Deposit</div>
       </NavLink>
     </div>
   )
 }
 
+
 const nairaWallet = (props) =>{
   return (
-    <div className = "">
-      <h1 className="">NairaWallet</h1>
-      <h3 className="">NGN {props.naira}</h3>
+    <div className = "w-full">
+      <div className="text-center">
+        <h1 className="">NairaWallet</h1>
+        <h3 className="">NGN {props.naira}</h3>
+      </div>
 
       <Router>
         <TradeButtons/>

@@ -15,7 +15,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.list .link .active {
-  background-color:red;
-}

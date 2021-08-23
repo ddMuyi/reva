@@ -10,34 +10,29 @@ import Sell from './Sell'
 import Buy from './Buy'
 
 const TradeButtons = () =>{
+  const linkClasses = 'flex h-full w-full items-center justify-center'
   return (
-    <div className="buttons">
-          <NavLink to="/bitcoinWallet/transfer">
-            <div className="">
-              <span><i class="fas fa-long-arrow-alt-up"></i></span>
-            </div>
-            <div className="">Transfer</div>
-          </NavLink>
-          <NavLink to="/bitcoinWallet/sell">
-           <div className="">
-              <span><i class="fas fa-long-arrow-alt-up"></i></span>
-            </div>
-            <div className="">Sell</div>
-          </NavLink>
-          <NavLink to="/bitcoinWallet/buy">
-            <div className="">
-              <span><i class="fas fa-long-arrow-alt-up"></i></span>
-            </div>
-            <div className="">Buy</div>
-          </NavLink>
-        </div>
+    <div className="filter shadow-lg w-4/5 sm:w-96 h-12 mx-auto bg-white flex items-center justify-between">
+      <NavLink to="/bitcoinWallet/transfer" className={`${linkClasses}`}>
+        <span><i class="fas fa-long-arrow-alt-up"></i></span>
+        <div className="">Transfer</div>
+      </NavLink>
+      <NavLink to="/bitcoinWallet/sell" className={`${linkClasses}`}>
+        <span><i class="fas fa-long-arrow-alt-left"></i></span>
+        <div className="">Sell</div>
+      </NavLink>
+      <NavLink to="/bitcoinWallet/buy" className={`${linkClasses}`}>
+        <span><i class="fas fa-long-arrow-alt-down"></i></span>
+        <div className="">Buy</div>
+      </NavLink>
+    </div>
   )
 }
 
 const BitcoinWallet = (props) =>{
   return (
-    <div className="">
-      <div className="">
+    <div className="w-full">
+      <div className="text-center mt-4">
         <h1>BitCoin Wallet</h1>
         <h3>{props.wallet}</h3>
       </div>
@@ -57,7 +52,7 @@ const BitcoinWallet = (props) =>{
         </Switch>
       </Router>
 
-      <NavLink to="/dashboard">
+      <NavLink exact to="/">
         <button>back</button>
       </NavLink>
     </div>
