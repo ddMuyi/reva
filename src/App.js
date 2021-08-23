@@ -9,6 +9,7 @@ import Transactions from './transactions'
 import Notifications from './notification'
 import Rate from './rate'
 import Profile from './profile'
+import BottomBar from './BottomNav'
 import {
   BrowserRouter as Router,
   Route,
@@ -68,12 +69,14 @@ const App = () =>{
 
   
   return (
-    <div>
-      <Router>
+    <div className="h-screen w-full bg-green-50">
+      <Router className="h-screen">
         <Navbar username={datas.personal.username}/>
-        <div className="main">
+
+
+        <div className="flex h-5/6">
           <Sidebar/>        
-          <Switch>
+          <Switch className="">
             <Route exact path='/' component={()=>{
               return <Home bitcoin = {datas.wallet.bitcoin} naira = {datas.wallet.naira}/>
             }}></Route>
@@ -92,6 +95,7 @@ const App = () =>{
             </Route>
           </Switch>
         </div>
+        <BottomBar/>
       </Router>
     </div>
   )
