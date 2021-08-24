@@ -73,11 +73,9 @@ const App = () =>{
     console.log(open)
   }
 
-  const width= open ? 'w-11/12' : '4/5'
-
   
   return (
-    <div className="h-screen w-full bg-green-50">
+    <div className="h-screen w-full bg-white">
       <Router className="h-screen">
         <Navbar username={datas.personal.username}/>
 

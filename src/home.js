@@ -12,12 +12,12 @@ const Home = (props) =>{
           <h3>Overview</h3>
         </div>
 
-        <section className="wallets h-24 sm:h-32 text-sm sm:text-2xl font-semibold w-full flex justify-between items-center mt-4">
-          <NavLink  to="/bitcoinWallet" className="filter shadow-md w-5/12 bg-orange-800 text-orange-100 h-full text-center rounded-lg flex flex-col justify-center items-center">
+        <section className="wallets h-24 sm:h-32 text-sm sm:text-2xl font-semibold w-full flex justify-around items-center mt-4">
+          <NavLink  to="/bitcoinWallet" className="filter shadow-md w-5/12 bg-orange-pattern bg-cover text-orange-100 h-full text-center rounded-lg flex flex-col justify-center items-center">
               <h5><span className="span"><i className="fa fa-btc"></i></span>{props.bitcoin}</h5>
               <h5>{nairaEquiv}</h5>
           </NavLink>
-          <NavLink  to="/nairaWallet" className="filter shadow-md w-5/12 bg-green-800 text-green-100 h-full  text-center rounded-lg flex flex-col justify-center items-center">
+          <NavLink  to="/nairaWallet" className="filter shadow-md w-5/12 bg-green-pattern bg-cover text-green-100 h-full  text-center rounded-lg flex flex-col justify-center items-center">
             <div className="">
               <h5>NGN {props.naira}</h5>
               <h5>$ {dollarEquiv}</h5>

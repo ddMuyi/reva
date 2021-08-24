@@ -10,7 +10,7 @@ const Profile = ({name, email, phoneNumber, address}) =>{
           <h6>Account-details</h6>
           <button class="border-green-800 border rounded-sm px-4 hover:bg-green-500 hover:text-white">Edit</button>
         </div>
-        <Container>
+        <Container width="sm-3/5">
           <div className="w-full px-4 h-auto text-sm">
             <h5 className="">Account Name : {name}</h5>
             <h5 className="mt-4">Emial: {email}</h5>

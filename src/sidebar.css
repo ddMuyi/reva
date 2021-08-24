@@ -3,3 +3,8 @@
   color:#F3F4F6;
   text-align:center;
 }
+
+.bottom li .active {
+  color:#064E3B;
+  background-color:white;
+}

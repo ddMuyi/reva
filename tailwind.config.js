@@ -4,7 +4,12 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:theme=>({
+        'orange-pattern' : "url('https://cdn.wallpapersafari.com/84/8/0SgRZF.jpg')",
+        'green-pattern':"url('https://wallpaperaccess.com/download/dark-green-pattern-1288360')"
+      })
+    },
     colors:{
       transparent: 'transparent',
       current: 'currentColor',
@@ -29,6 +34,8 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+      backgroundImage: ['responsive', 'hover', 'focus', 'active'],
+      transitionDuration: ['hover', 'responsive']
     },
   },
   plugins: [],

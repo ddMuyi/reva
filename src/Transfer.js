@@ -23,7 +23,7 @@ const Transfer = (props)=>{
           <div className="w-full">
             <label htmlFor="amount">Amount in BTC</label>
             <Input type="text" name="amount" onChange={changeHandler} value={amountBTCTransfer}/> <br/>
-            <small className="ml">BTC Balance: {props.balance}</small>
+            <small className="mr-0">BTC Balance: {props.balance}</small>
           </div>
 
           <div className="mt-4">
@@ -36,7 +36,10 @@ const Transfer = (props)=>{
             <Input type="text" name="address"/>
           </div>
 
-          <Button onClick={props.transferHandler} nameTag="Transfer"/>
+          <div className="mt-4 flex justify-between items-center">
+            <Button onClick={props.transferHandler} nameTag="Cancel" width="w-2/5"/>
+            <Button onClick={props.transferHandler} nameTag="Transfer" width="w-2/5"/>
+          </div>
 
 
         </form>

@@ -11,8 +11,8 @@ const SideBar = ({open, toggleHandler}) =>{
   const linkClasses=`link flex items-center ${open ? 'justify-start': 'justify-center'} text-gray-100 w-full h-5/6 px-4 rounded`
   const listClasses = 'list flex items-center justify-center w-full h-full'
   return (
-    <div className={`bg-green-900 ${width} h-full hidden sm:flex relative`}>
-      <div className="absolute w-8 h-8 bg-white rounded-full top-0 -right-4 flex items-center justify-center" onClick={()=>{toggleHandler()}}>
+    <div className={`bg-green-900 ${width} h-full hidden sm:flex relative transition duration-300 ease-in-out`}>
+      <div className="absolute w-8 h-8 bg-white rounded-full top-0 -right-4 flex border-green-800 border items-center justify-center" onClick={()=>{toggleHandler()}}>
         <span><i className={`fas ${chevron} text-green-800 text-lg`}></i></span>
       </div>
 

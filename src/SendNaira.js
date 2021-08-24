@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './components/buttons'
+import Input from './components/Input'
 
 const SendNaira = () =>{
   const inputClasses = 'w-full h-8 pl-4 border-gray-500 border'
@@ -9,11 +10,11 @@ const SendNaira = () =>{
       <div className="w-5/6 mx-auto mt-4">
         <div className="">
           <label htmlFor="amount">Amount in Naira</label>
-          <input type="text" id="amount" name="amount" className={`${inputClasses}`}/>
+          <Input type="text" name="amount"/>
         </div>
         <div className="mt-4">
           <label htmlFor="amountBTC">Amount in BTC</label>
-          <input type="text" id="amountBTC" name="amountBTC" className={`${inputClasses}`}/>
+          <Input type="text" name="amountBTC"/>
         </div>
         <Button nameTag="send"/>
       </div>
