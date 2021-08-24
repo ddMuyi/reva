@@ -1,4 +1,6 @@
 import React, {useEffect} from 'react'
+import Input from './components/Input'
+import Button from './components/buttons'
 
 const Buy = (props) =>{
   const [amount, setAmount] = React.useState('')
@@ -16,7 +18,6 @@ const Buy = (props) =>{
     localStorage.setItem("AmountofBTCBuy", btcValue)
   }, [btcValue])
   
-  const inputClasses = 'w-full h-8 pl-4 border-gray-500 border'
   
   return (
     <section className="filter shadow-md w-4/5 sm:w-96 h-auto py-6 mx-auto bg-white rounded-lg mt-4">
@@ -24,13 +25,13 @@ const Buy = (props) =>{
       <div className="w-5/6 mx-auto mt-4">
         <div className="">
           <label htmlFor="amount">Amount in Naira</label>
-          <input type="number" id="amount" name="amount" onChange={changeHandler} value={amount} className={`${inputClasses}`}/>
+          <Input type="number" name="amount" onChange={changeHandler} value={amount}/>
         </div>
         <div className="mt-4">
           <label htmlFor="amountBTC">Amount in BTC</label>
-          <input type="text" id="amountBTC" name="amountBTC" onChange={btcChangeHandler} value={btcValue} className={`${inputClasses}`}/>
+          <Input type="text" id="amountBTC" name="amountBTC" onChange={btcChangeHandler} value={btcValue}/>
         </div>
-        <button onClick={props.buyHandler} className="mt-6 h-8 w-full uppercase bg-green-800 text-white text-sm">Buy</button>
+        <Button onClick={props.buyHandler} nameTag="Buy"/>
       </div>
     </section>
   )

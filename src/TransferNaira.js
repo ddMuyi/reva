@@ -1,4 +1,6 @@
 import React from 'react'
+import Input from './components/Input'
+import Button from './components/buttons'
 
 const TransferNaira = ()=>{
   const [transferAmount, setTransferAmount] = React.useState(0)
@@ -19,43 +21,43 @@ const TransferNaira = ()=>{
         <form action="#">
           <div className="mt-4">
             <label htmlFor="amount">Amount you intend to withdraw</label>
-            <input type="text" id="amount" name="amount" onChange={transferHandler} value={transferAmount} className={`${inputClasses}`}/>
+            <Input type="text" name="amount" onChange={transferHandler} value={transferAmount}/>
           </div>
 
           {display === false ? <div className="flex flex-col items-center h-auto">
-            <button onClick={displayDefault} className="mt-6 h-8 w-full uppercase bg-green-800 text-white text-sm">Send to another account</button>
-            <button className="mt-6 h-8 w-full uppercase bg-green-800 text-white text-sm">Send to default</button>
+            <Button onClick={displayDefault} nameTag="Send to another"/>
+            <Button nameTag="Send to default"/>
           </div> : ''}
 
 
 
-          {display===true? <Default inputClasses={inputClasses} /> : ''}
+          {display===true? <Default/> : ''}
         </form>
       </div>
     </section>
   )
 }
 
-const Default = ({setDisplay, inputClasses}) =>{
+const Default = ({setDisplay}) =>{
   return (
     <div>
       <div className="">
         <label htmlFor="#">Bank Name</label>
-        <input type="text"/>
+        <Input type="text"/>
       </div>
 
       <div className="">
         <label htmlFor="#">Account Number</label>
-        <input type="text" className={inputClasses}/>
+        <Input type="text"/>
       </div>
 
       <div className="">
         <label htmlFor="#">Name</label>
-        <input type="text" className={inputClasses}/>
+        <Input type="text"/>
       </div>
       <div className="">
-        <button className="">Default</button>
-        <button onClick={setDisplay} className=" text-sm">Withdraw</button>
+        <Button nameTag="Default"/>
+        <Button onClick={setDisplay} nameTag="Withdraw"/>
       </div>
     </div>
   )

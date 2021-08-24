@@ -1,8 +1,6 @@
-const Input =({children})=>{
-  return (
-    <div className="filter shadow-md w-4/5 sm:w-3/5 h-auto py-6 mx-auto bg-white rounded-lg mt-4">
-      {children}
-    </div>
+const Input = ({type, onChange, value, name}) =>{
+  return(
+    <input type={type} onChange={onChange} value={value} name={name} className='w-full h-8 pl-4 border-gray-500 border'/>
   )
 }
 

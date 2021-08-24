@@ -67,6 +67,14 @@ const App = () =>{
     })
   }
 
+  const [open, setOpen] = React.useState(false)
+  const toggleHandler=()=>{
+    setOpen(!open)
+    console.log(open)
+  }
+
+  const width= open ? 'w-11/12' : '4/5'
+
   
   return (
     <div className="h-screen w-full bg-green-50">
@@ -75,7 +83,7 @@ const App = () =>{
 
 
         <div className="flex h-5/6">
-          <Sidebar/>        
+          <Sidebar open={open} toggleHandler={toggleHandler}/>        
           <Switch className="">
             <Route exact path='/' component={()=>{
               return <Home bitcoin = {datas.wallet.bitcoin} naira = {datas.wallet.naira}/>

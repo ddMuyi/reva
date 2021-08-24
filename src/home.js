@@ -4,14 +4,15 @@ import {NavLink} from 'react-router-dom'
 const Home = (props) =>{
   const nairaEquiv = (props.bitcoin * 14000000).toFixed(2)
   const dollarEquiv = (props.naira / 500).toFixed(2)
+
   return (
-    <section className="w-full h-4/5 sm:w-4/5 flex flex-col justify-around items-center">
+    <section className="w-full h-4/5 sm:w-4/5 flex flex-col justify-around items-center mx-auto">
       <section className="w-4/5">
-        <div className="">
+        <div className="text-green-800 font-semibold">
           <h3>Overview</h3>
         </div>
 
-        <section className="wallets h-24 sm:h-32 w-full flex justify-between items-center mt-4">
+        <section className="wallets h-24 sm:h-32 text-sm sm:text-2xl font-semibold w-full flex justify-between items-center mt-4">
           <NavLink  to="/bitcoinWallet" className="filter shadow-md w-5/12 bg-orange-800 text-orange-100 h-full text-center rounded-lg flex flex-col justify-center items-center">
               <h5><span className="span"><i className="fa fa-btc"></i></span>{props.bitcoin}</h5>
               <h5>{nairaEquiv}</h5>

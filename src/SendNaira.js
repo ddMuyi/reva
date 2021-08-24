@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './components/buttons'
 
 const SendNaira = () =>{
   const inputClasses = 'w-full h-8 pl-4 border-gray-500 border'
@@ -14,7 +15,7 @@ const SendNaira = () =>{
           <label htmlFor="amountBTC">Amount in BTC</label>
           <input type="text" id="amountBTC" name="amountBTC" className={`${inputClasses}`}/>
         </div>
-        <button className="mt-6 h-8 w-full uppercase bg-green-800 text-white text-sm">Send</button>
+        <Button nameTag="send"/>
       </div>
     </section>
   )

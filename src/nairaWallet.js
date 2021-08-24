@@ -8,6 +8,7 @@ import {
 import TransferNaira from './TransferNaira'
 import SendNaira from './SendNaira'
 import DepositNaira from './DepositNaira'
+import Button from './components/buttons'
 
 const TradeButtons = () =>{
   const linkClasses = 'flex h-full w-full items-center justify-center'
@@ -32,7 +33,7 @@ const TradeButtons = () =>{
 
 const nairaWallet = (props) =>{
   return (
-    <div className = "w-full">
+    <div className = "w-full relative">
       <div className="text-center">
         <h1 className="">NairaWallet</h1>
         <h3 className="">NGN {props.naira}</h3>
@@ -48,8 +49,8 @@ const nairaWallet = (props) =>{
           }}></Route>
         </Switch>
       </Router>
-      <NavLink to="/nairawallet">
-        <button>back</button>
+      <NavLink exact to="/" className="absolute top-0 right-0 bg-transparent">
+        <Button nameTag="Back" width="w-12 mt-0"/>
       </NavLink>
     </div>
   )
