@@ -19,7 +19,7 @@ const BottomBar = () =>{
           </NavLink>
         </li>
         <li className="w-full h-full">
-          <NavLink to="/" exact className={`${linkClasses}`}>
+          <NavLink to="/apps" exact className={`${linkClasses}`}>
             <span><i className="fas fa-home text-xl"></i></span>
             <h6 className="font-medium">Home</h6>
           </NavLink>

@@ -9,16 +9,16 @@ const SideBar = ({open, toggleHandler}) =>{
   const width= open ? 'w-1/5' : 'w-1/12'
 
   const linkClasses=`link flex items-center ${open ? 'justify-start': 'justify-center'} text-gray-100 w-full h-5/6 px-4 rounded`
-  const listClasses = 'list flex items-center justify-center w-full h-full'
+  const listClasses = 'sidebar list flex items-center justify-center w-full h-full'
   return (
-    <div className={`bg-green-900 ${width} h-full hidden sm:flex relative transition duration-300 ease-in-out`}>
+    <div className={`bg-charcoal-primary ${width} h-full hidden sm:flex relative transition duration-300 ease-in-out`}>
       <div className="absolute w-8 h-8 bg-white rounded-full top-0 -right-4 flex border-green-800 border items-center justify-center" onClick={()=>{toggleHandler()}}>
         <span><i className={`fas ${chevron} text-green-800 text-lg`}></i></span>
       </div>
 
       <ul className='filter w-full flex flex-col mx-auto h-2/4'>
         <li className={`${listClasses}`}>
-          <NavLink to="/" exact className={`${linkClasses}`}>
+          <NavLink to="/apps/" exact className={`${linkClasses}`}>
             <span><i className="fas fa-home"></i></span>
             <h6 className={appear}>Home</h6>
           </NavLink>

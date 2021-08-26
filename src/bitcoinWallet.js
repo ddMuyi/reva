@@ -11,9 +11,9 @@ import Buy from './Buy'
 import Button from './components/buttons'
 
 const TradeButtons = () =>{
-  const linkClasses = 'flex h-full w-full items-center justify-center'
+  const linkClasses = 'filter flex h-full w-full items-center justify-center'
   return (
-    <div className="filter shadow-lg w-4/5 sm:w-96 h-12 mx-auto bg-white flex items-center justify-between">
+    <div className="nav filter shadow-lg w-4/5 sm:w-96 h-12 mt-4 mx-auto bg-white flex items-center justify-between">
       <NavLink to="/bitcoinWallet/transfer" className={`${linkClasses}`}>
         <span><i class="fas fa-long-arrow-alt-up"></i></span>
         <div className="">Transfer</div>
@@ -32,10 +32,10 @@ const TradeButtons = () =>{
 
 const BitcoinWallet = (props) =>{
   return (
-    <div className="w-full relative">
+    <div className="w-full relative bg-light-yellow pt-4">
       <div className="text-center mt-4">
-        <h1>BitCoin Wallet</h1>
-        <h3>{props.wallet}</h3>
+        <h1 className="text-xl font-semibold text-charcoal-dark">BitCoin Wallet</h1>
+        <h3 className="text-lg text-charcoal-dark">{props.wallet}</h3>
       </div>
 
       <Router>
@@ -53,7 +53,7 @@ const BitcoinWallet = (props) =>{
         </Switch>
       </Router>
 
-      <NavLink exact to="/" className="absolute top-0 right-0 bg-transparent">
+      <NavLink exact to="/apps" className="absolute top-0 right-0 bg-transparent">
         <Button nameTag='Back' width="w-12 mt-0"/>
       </NavLink>
     </div>

@@ -24,9 +24,9 @@ const TransferNaira = ()=>{
             <Input type="text" name="amount" onChange={transferHandler} value={transferAmount}/>
           </div>
 
-          {display === false ? <div className="flex flex-col items-center h-auto">
-            <Button onClick={displayDefault} nameTag="Send to another"/>
-            <Button nameTag="Send to default"/>
+          {display === false ? <div className="flex items-center justify-between h-auto">
+            <Button onClick={displayDefault} nameTag="Send to another" text="text-green-900" width="w-2/6"/>
+            <Button nameTag="Send to default" bg="bg-green-900" text="text-white" width="w-3/6"/>
           </div> : ''}
 
 
@@ -55,9 +55,9 @@ const Default = ({setDisplay}) =>{
         <label htmlFor="#">Name</label>
         <Input type="text"/>
       </div>
-      <div className="">
-        <Button nameTag="Default"/>
-        <Button onClick={setDisplay} nameTag="Withdraw"/>
+      <div className="flex justify-between">
+        <Button nameTag="Default" width="w-2/5" text="text-green-900"/>
+        <Button onClick={setDisplay} nameTag="Withdraw" width="w-2/5" text="text-white" bg="bg-green-900"/>
       </div>
     </div>
   )

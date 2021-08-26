@@ -1,10 +1,17 @@
-.active {
-  background-color:#047857;
-  color:#F3F4F6;
+.sidebar .active {
+  background-color:#95b391;
+  color:#393737;
   text-align:center;
+  font-weight:600;
+}
+
+.nav .active {
+  border-bottom:5px solid #355D39;
+  color:#355D39;
+  font-weight:600;
 }
 
 .bottom li .active {
-  color:#064E3B;
+  color:#355D39;
   background-color:white;
 }

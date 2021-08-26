@@ -13,7 +13,7 @@ import Button from './components/buttons'
 const TradeButtons = () =>{
   const linkClasses = 'flex h-full w-full items-center justify-center'
   return (
-    <div className="filter shadow-lg w-4/5 sm:w-96 h-12 mx-auto bg-white flex items-center justify-between">
+    <div className="nav filter shadow-lg w-4/5 sm:w-96 h-12 mx-auto mt-4 bg-white flex items-center justify-between">
       <NavLink to="/nairawallet/transfernaira" className={`${linkClasses}`}>
         <span><i class="fas fa-long-arrow-alt-up"></i></span>
         <div className="">Withdraw</div>
@@ -33,10 +33,10 @@ const TradeButtons = () =>{
 
 const nairaWallet = (props) =>{
   return (
-    <div className = "w-full relative">
+    <div className = "w-full h-full relative bg-light-green pt-4">
       <div className="text-center">
-        <h1 className="">NairaWallet</h1>
-        <h3 className="">NGN {props.naira}</h3>
+        <h1 className="text-xl font-semibold text-charcoal-dark">NairaWallet</h1>
+        <h3 className="text-lg text-charcoal-dark">NGN {props.naira}</h3>
       </div>
 
       <Router>
@@ -49,7 +49,7 @@ const nairaWallet = (props) =>{
           }}></Route>
         </Switch>
       </Router>
-      <NavLink exact to="/" className="absolute top-0 right-0 bg-transparent">
+      <NavLink exact to="/apps" className="absolute top-0 right-0 bg-transparent">
         <Button nameTag="Back" width="w-12 mt-0"/>
       </NavLink>
     </div>

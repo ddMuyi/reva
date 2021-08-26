@@ -2,7 +2,9 @@ import React from 'react'
 
 const Notifications = () =>{
   return(
-    <h1>Notifications</h1>
+    <div className="w-full">
+      <h1>Notifications</h1>
+    </div>
   )
 }
 

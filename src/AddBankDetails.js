@@ -4,26 +4,26 @@ import Container from './components/container'
 
 const AddBankDetails = () =>{
   return (
-    <Container>
+    <div className="w-full h-full">
+      <Container>
       <h2 className="text-center text-orange-800 semibold text-xl">Add Bank Details</h2>
-      <form action="#" className="w-5/6 mx-auto">
-        <div className="w-full ">
+      <form action="#" className="w-full mx-auto">
+        <div className="w-full mt-2">
           <label htmlFor="#">Bank Name</label>
           <Input type="text" name="bankname"></Input>
         </div>
-        <div className="w-full">
+        <div className="w-full mt-4">
           <label htmlFor="#">Account Number</label>
           <Input type="text" name="accountnumber"></Input>
         </div>
-        <div className="w-full">
+        <div className="w-full mt-4">
           <label htmlFor="#">Account Name</label>
           <Input type="text" name="accountname"></Input>
         </div>
-        <div className="w-full">
-          <Button nametag="Save Bank Details"></Button>
-        </div>
+        <Button nameTag="Save Bank Details"></Button>
       </form>
     </Container>
+    </div>
   )
 }
 

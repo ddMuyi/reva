@@ -17,6 +17,15 @@ module.exports = {
       red:colors.red,
       gray:colors.coolGray,
       white:colors.white,
+      light:{
+        yellow:'#EDECDF',
+        gray:'F7F2F2',
+        green:'#95B391'
+      },
+      charcoal:{
+        dark:'#393737',
+        primary:'#355D39',
+      },
       orange:{
         50:'#fff3e0',
         100:'#ffe0b2',
