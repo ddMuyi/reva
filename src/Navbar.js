@@ -4,7 +4,7 @@ import CompanyLogo from './logo.jpg'
 
 const Navbar = (props) =>{
   return (
-    <header className="flex justify-between w-full h-20 sm:h-1/6 items-center px-8 border-gray-300 border-b">
+    <header className="flex justify-between w-full h-16 sm:h-20 items-center px-8 border-gray-300 border-b">
       <section className="flex w-full sm:w-1/3 justify-between h-full items-center">
         <div className="w-20 sm:w-24 h-auto">
           <img src={CompanyLogo} alt="" className="w-full h-full"/>

@@ -76,11 +76,11 @@ const Apps = () =>{
     console.log(open)
   }
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full transition relative z-10 duration-300 ease-in-out">
       <Router>
       <Navbar username={datas.personal.username}/>
       
-      <div className="flex h-5/6 w-full">
+      <div className="flex h-5/6 sm:h-full  w-full">
         <Sidebar open={open} toggleHandler={toggleHandler}/>        
         <Switch className="">
           <Route exact path='/apps' component={()=>{
